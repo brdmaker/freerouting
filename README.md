@@ -16,3 +16,8 @@ security.jgss, compiler, jdk.unsupported, jdk.crypto.ec, jdk.management, jdk.jfr
 Verified: routed `fixtures/Issue027-zMRETestFixture.dsn` (251 nets -> 5 unrouted after 2 passes) and
 `tutorial_board.dsn` with this JRE. Rebuild: JDK 25 + `./gradlew executableJar -x test`.
 Note: the jar tries analytics calls on start; they fail harmlessly when the network blocks them.
+
+## Render a routed board
+
+`python3 -I render_board.py board.dsn board.ses out.png` (needs Pillow) draws F.Cu and mirrored B.Cu
+side by side. Quick visual check only; run the design rules check in your EDA tool.
