@@ -1,6 +1,6 @@
 # freerouting binaries (orphan branch)
 
-Prebuilt headless-capable freerouting, built from `master` @ `099368c6` (v2.5.1-SNAPSHOT, 2026-11-06).
+Prebuilt headless-capable freerouting, built from `master` @ `01db81ca` (v2.5.1-SNAPSHOT, 2026-11-15).
 
 | File | What |
 |---|---|
@@ -13,8 +13,7 @@ Use: `./freerouting.sh -de board.dsn -do board.ses -mp 20`
 JRE modules: java.base, desktop, logging, naming, net.http, sql, xml, management, prefs, scripting,
 security.jgss, compiler, jdk.unsupported, jdk.crypto.ec, jdk.management, jdk.jfr.
 
-Verified: routed `fixtures/Issue027-zMRETestFixture.dsn` (251 nets -> 5 unrouted after 2 passes) and
-`tutorial_board.dsn` with this JRE. Rebuild: JDK 25 + `./gradlew executableJar -x test`.
+Verified: routed an 2-layer 120-net board (ar488) with this JRE: 0 unrouted, no violations, ~2 min.
 Note: the jar tries analytics calls on start; they fail harmlessly when the network blocks them.
 
 ## Render a routed board
