@@ -7,7 +7,7 @@ Prebuilt headless-capable freerouting, built from `master` @ `01db81ca` (v2.5.1-
 | `freerouting.jar` | fat jar (`./gradlew executableJar -x test`), needs Java 25 |
 | `linux-x64/jre25-freerouting-linux-x64.tar.xz` | minimal JRE 25 (jlink, ~60 MB unpacked) from Oracle JDK 25.0.5; unpacks to `rt/` |
 | `skills/freerouting/` | Claude skill: KiCad workflow (`SKILL.md`) + tuning guide (`tuning.md`); copy the folder to `.claude/skills/` |
-| `kicad_dsn.py` | KiCad pcbnew DSN export / SES import helper (untested) |
+| `kicad_dsn.py` | pcbnew helper to import a routed SES into a board (needs a KiCad Python with `pcbnew`; DSN export is `kicad-cli pcb export specctra`); untested |
 | `freerouting.sh` | unpacks the JRE on first use and runs the jar headless |
 
 Use: `./freerouting.sh -de board.dsn -do board.ses -mp 20`
